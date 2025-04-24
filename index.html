@@ -15,14 +15,12 @@
                 <img src="assets/logo.png" alt="SafeBank Shield Logo">
                 <div class="logo-text">Safe<span>Bank</span> Shield</div>
             </div>
-            
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="detection-tool.html">Detection Tool</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            
             <div class="mobile-menu-btn" id="menuBtn">
                 <span></span>
                 <span></span>
@@ -30,190 +28,284 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="particles" id="particles"></div>
-        
         <div class="hero-content">
             <h1>Protection Against E-Banking Phishing Attacks</h1>
             <p>Our advanced detection system uses associative classification to identify and protect you from sophisticated phishing attempts targeting your financial information.</p>
+            <div class="hero-input">
+                <form id="quickUrlForm" class="quick-analysis-form">
+                    <div class RECTIFIED="input-group">
+                        <input type="url" id="quickUrlInput" placeholder="Enter URL to analyze (e.g., https://example.com)" required>
+                        <button type="submit" class="btn"><i class="fas fa-search"></i> Quick Scan</button>
+                    </div>
+                </form>
+                <div class="quick-result" id="quickResult"></div>
+            </div>
             <div class="hero-buttons">
                 <a href="detection-tool.html" class="btn">Try The Detection Tool</a>
                 <a href="resources.html" class="btn btn-outline">Learn More</a>
             </div>
-            
-            <div class="hero-stats">
+        </div>
+    </section>
+
+    <!-- Detection Stats Section -->
+    <section class="detection-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Detection Statistics</h2>
+                <p>Our system analyzes millions of URLs with high accuracy.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="progress-circle" data-percentage="78">
+                        <span class="progress-value">78%</span>
+                        <svg>
+                            <circle cx="70" cy="70" r="60"></circle>
+                            <circle cx="70" cy="70" r="60" class="progress"></circle>
+                        </svg>
+                    </div>
+                    <h3>Safe URLs</h3>
+                    <p><i class="fas fa-shield-alt"></i> Websites deemed secure.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="progress-circle" data-percentage="15">
+                        <span class="progress-value">15%</span>
+                        <svg>
+                            <circle cx="70" cy="70" r="60"></circle>
+                            <circle cx="70" cy="70" r="60" class="progress"></circle>
+                        </svg>
+                    </div>
+                    <h3>Unsafe URLs</h3>
+                    <p><i class="fas fa-exclamation-triangle"></i> Confirmed phishing sites.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="progress-circle" data-percentage="7">
+                        <span class="progress-value">7%</span>
+                        <svg>
+                            <circle cx="70" cy="70" r="60"></circle>
+                            <circle cx="70" cy="70" r="60" class="progress"></circle>
+                        </svg>
+                    </div>
+                    <h3>Warning URLs</h3>
+                    <p><i class="fas fa-exclamation-circle"></i> Potentially risky sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Scans Section -->
+    <section class="recent-scans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Scans</h2>
+                <p>View recent URL analyses performed by our users.</p>
+            </div>
+            <div class="scans-grid">
+                <div class="scan-card">
+                    <div class="scan-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="scan-content">
+                        <h3>https://securebank.com</h3>
+                        <p>Status: <span class="status safe">Safe</span></p>
+                        <p>Domain Age: 5 years</p>
+                        <p>SSL: Valid</p>
+                    </div>
+                </div>
+                <div class="scan-card">
+                    <div class="scan-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="scan-content">
+                        <h3>https://fakebank.com</h3>
+                        <p>Status: <span class="status unsafe">Unsafe</span></p>
+                        <p>Domain Age: 2 days</p>
+                        <p>SSL: Invalid</p>
+                    </div>
+                </div>
+                <div class="scan-card">
+                    <div class="scan-icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="scan-content">
+                        <h3>https://suspicious.site</h3>
+                        <p>Status: <span class="status warning">Warning</span></p>
+                        <p>Domain Age: 1 month</p>
+                        <p>SSL: Valid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <p>Trusted by millions to secure their online banking.</p>
+            </div>
+            <div class="stats-grid">
                 <div class="stat-box">
-                    <div class="stat-number">97.8%</div>
+                    <div class="stat-number" data-target="97.8">0</div>
                     <p>Detection Accuracy</p>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">10M+</div>
-                    <p>URLs Analyzed</p>
+                    <div class="stat-number" data-target="10">0</div>
+                    <p>Million URLs Analyzed</p>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">500k+</div>
-                    <p>Users Protected</p>
+                    <div class="stat-number" data-target="500">0</div>
+                    <p>Thousand Users Protected</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Features Section -->
     <section class="features">
-        <div class="section-header">
-            <h2>Key Features</h2>
-            <p>Our solution offers comprehensive protection against various e-banking phishing techniques</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-search"></i></div>
-                <div class="feature-content">
-                    <h3>URL Analysis</h3>
-                    <p>Advanced analysis of URL structure, domain age, and registration information to identify suspicious patterns.</p>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Our solution offers comprehensive protection against various e-banking phishing techniques.</p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="feature-content">
-                    <h3>Real-time Protection</h3>
-                    <p>Instant scanning and verification of banking URLs before you enter sensitive information.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <div class="feature-content">
+                        <h3>URL Analysis</h3>
+                        <p>Advanced analysis of URL structure, domain age, and registration information.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                <div class="feature-content">
-                    <h3>Machine Learning</h3>
-                    <p>Associative classification algorithms identify complex patterns in phishing websites.</p>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="feature-content">
+                        <h3>Real-time Protection</h3>
+                        <p>Instant scanning and verification of banking URLs.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-lock"></i></div>
-                <div class="feature-content">
-                    <h3>SSL Verification</h3>
-                    <p>Thorough analysis of SSL certificates to ensure proper security credentials.</p>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <div class="feature-content">
+                        <h3>Machine Learning</h3>
+                        <p>Associative classification algorithms identify complex patterns.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                <div class="feature-content">
-                    <h3>Multi-platform Support</h3>
-                    <p>Protection across all your devices with our responsive tools.</p>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-content">
+                        <h3>SSL Verification</h3>
+                        <p>Thorough analysis of SSL certificates for security.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
-                <div class="feature-content">
-                    <h3>Continuous Updates</h3>
-                    <p>Our detection models are constantly updated to recognize new phishing techniques.</p>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="feature-content">
+                        <h3>Multi-platform Support</h3>
+                        <p>Protection across all your devices.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div class="feature-content">
+                        <h3>Continuous Updates</h3>
+                        <p>Constantly updated to recognize new phishing techniques.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- How It Works Section -->
     <section class="how-it-works">
-        <div class="section-header">
-            <h2>How It Works</h2>
-            <p>Our detection system uses a four-step process to identify and protect against phishing websites.</p>
-        </div>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>URL Analysis</h3>
-                    <p>We analyze the URL structure, domain age, and registration details to identify suspicious patterns.</p>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Our detection system uses a four-step process to protect against phishing.</p>
             </div>
-            
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Content Analysis</h3>
-                    <p>Our system examines the website's content, including HTML structure and JavaScript behavior.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>URL Analysis</h3>
+                        <p>Analyzes URL structure, domain age, and registration details.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Pattern Recognition</h3>
-                    <p>Using associative classification, we identify complex patterns and relationships in the data.</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Content Analysis</h3>
+                        <p>Examines website content, HTML, and JavaScript behavior.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Real-time Protection</h3>
-                    <p>Immediate feedback and protection measures are implemented based on the analysis results.</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Pattern Recognition</h3>
+                        <p>Identifies complex patterns using associative classification.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Real-time Protection</h3>
+                        <p>Provides immediate feedback and protection measures.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="section-header">
-            <h2>What Our Users Say</h2>
-            <p>Trusted by thousands of users worldwide for their online banking security</p>
-        </div>
-        
-        <div class="testimonial-slider">
-            <div class="testimonial-slides">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"SafeBank Shield has been an essential tool for our online banking security. The detection accuracy is impressive, and it's saved us from several phishing attempts."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/testimonial1.jpg" alt="John Smith" class="author-img">
-                        <div class="author-name">John Smith</div>
-                        <div class="author-role">Banking Security Officer</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"The real-time protection feature gives me peace of mind when doing online banking. I highly recommend SafeBank Shield to everyone."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/testimonial2.jpg" alt="Sarah Johnson" class="author-img">
-                        <div class="author-name">Sarah Johnson</div>
-                        <div class="author-role">Financial Advisor</div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Trusted by thousands for online banking security.</p>
             </div>
-            
-            <div class="slider-controls">
-                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"SafeBank Shield has been essential for our banking security. The detection accuracy is impressive."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonial1.jpg" alt="John Smith" class="author-img">
+                            <div class="author-name">John Smith</div>
+                            <div class="author-role">Banking Security Officer</div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The real-time protection gives me peace of mind when banking online."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonial2.jpg" alt="Sarah Johnson" class="author-img">
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-role">Financial Advisor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="cta-content">
             <h2>Ready to Protect Your Online Banking?</h2>
-            <p>Join thousands of users who trust SafeBank Shield for their online banking security.</p>
+            <p>Join thousands who trust SafeBank Shield for their security.</p>
             <a href="detection-tool.html" class="btn">Get Started Now</a>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-about">
                 <div class="footer-logo">Safe<span>Bank</span> Shield</div>
-                <p>Protecting your online banking experience with advanced phishing detection technology.</p>
+                <p>Protecting your online banking with advanced phishing detection.</p>
                 <div class="footer-social">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -221,7 +313,6 @@
                     <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -231,7 +322,6 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            
             <div class="footer-links">
                 <h3>Resources</h3>
                 <ul>
@@ -241,22 +331,20 @@
                     <li><a href="terms.html">Terms of Service</a></li>
                 </ul>
             </div>
-            
             <div class="footer-newsletter">
                 <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for the latest security updates and tips.</p>
+                <p>Subscribe for the latest security updates and tips.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Your email address" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
-        
         <div class="footer-bottom">
-            <p>&copy; 2024 SafeBank Shield. All rights reserved.</p>
+            <p>© 2024 SafeBank Shield. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

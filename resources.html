@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - SafeBank Shield</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="SafeBank Shield Logo">
+                <div class="logo-text">Safe<span>Bank</span> Shield</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detection-tool.html">Detection Tool</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Phishing Prevention Resources</h2>
+                <p>Explore our collection of articles, guides, and tools to stay safe from e-banking phishing attacks.</p>
+            </div>
+
+            <div class="resource-filter">
+                <input type="text" id="resourceSearch" placeholder="Search resources..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="article">Articles</button>
+                    <button class="filter-btn" data-filter="guide">Guides</button>
+                    <button class="filter-btn" data-filter="tool">Tools</button>
+                </div>
+            </div>
+
+            <div class="resource-grid">
+                <div class="resource-card" data-category="article">
+                    <div class="resource-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="resource-content">
+                        <h3>Understanding Phishing Attacks</h3>
+                        <p>Learn the basics of phishing and how attackers target your financial information.</p>
+                        <a href="#" class="btn btn-outline">Read Article</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-category="guide">
+                    <div class="resource-icon"><i class="fas fa-book"></i></div>
+                    <div class="resource-content">
+                        <h3>Complete Guide to Secure Banking</h3>
+                        <p>A comprehensive guide to protecting your online banking accounts.</p>
+                        <a href="#" class="btn btn-outline">Download PDF</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-category="tool">
+                    <div class="resource-icon"><i class="fas fa-toolbox"></i></div>
+                    <div class="resource-content">
+                        <h3>Password Strength Checker</h3>
+                        <p>Test the strength of your passwords to ensure maximum security.</p>
+                        <a href="#" class="btn btn-outline">Try Tool</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-category="article">
+                    <div class="resource-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="resource-content">
+                        <h3>Latest Phishing Trends</h3>
+                        <p>Stay updated with the newest techniques used by cybercriminals.</p>
+                        <a href="#" class="btn btn-outline">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">Safe<span>Bank</span> Shield</div>
+                <p>Protecting your online banking experience with advanced phishing detection technology.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="detection-tool.html">Detection Tool</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest security updates and tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 SafeBank Shield. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Resource Filter and Search
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('resourceSearch');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const resourceCards = document.querySelectorAll('.resource-card');
+
+            // Filter by category
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+                    resourceCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            card.classList.add('fade-in');
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                resourceCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        card.classList.add('fade-in');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
