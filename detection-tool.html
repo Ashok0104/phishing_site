@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Tool - SafeBank Shield</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detection-tool.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="SafeBank Shield Logo">
+                <div class="logo-text">Safe<span>Bank</span> Shield</div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detection-tool.html" class="active">Detection Tool</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="mobile-menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Detection Tool Section -->
+    <section class="detection-tool">
+        <div class="container">
+            <div class="section-header">
+                <h2>URL Analysis Tool</h2>
+                <p>Enter a URL to check if it's a potential phishing website</p>
+            </div>
+            
+            <div class="tool-container">
+                <form id="urlAnalysisForm" class="analysis-form">
+                    <div class="input-group">
+                        <input type="url" id="urlInput" placeholder="Enter URL to analyze (e.g., https://example.com)" required>
+                        <button type="submit" class="btn">
+                            <i class="fas fa-search"></i> Analyze
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="results-container" id="resultsContainer">
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <div class="spinner"></div>
+                        <p>Analyzing URL...</p>
+                    </div>
+                    
+                    <div class="analysis-results" id="analysisResults">
+                        <div class="result-header">
+                            <h3>Analysis Results</h3>
+                            <div class="result-status" id="resultStatus">
+                                <span class="status-icon"><i class="fas fa-shield-alt"></i></span>
+                                <span class="status-text">Safe</span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-details">
+                            <div class="detail-item">
+                                <h4>URL Analysis</h4>
+                                <div class="detail-content">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Domain Age:</span>
+                                        <span class="detail-value" id="domainAge">2 years</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">SSL Certificate:</span>
+                                        <span class="detail-value" id="sslStatus">Valid</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">IP Address:</span>
+                                        <span class="detail-value" id="ipAddress">192.168.1.1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <h4>Content Analysis</h4>
+                                <div class="detail-content">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suspicious Keywords:</span>
+                                        <span class="detail-value" id="keywords">None detected</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Form Fields:</span>
+                                        <span class="detail-value" id="formFields">Secure</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">JavaScript Analysis:</span>
+                                        <span class="detail-value" id="jsAnalysis">Clean</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <h4>Reputation Score</h4>
+                                <div class="score-container">
+                                    <div class="score-circle">
+                                        <div class="score-value" id="reputationScore">85</div>
+                                        <div class="score-label">Score</div>
+                                    </div>
+                                    <div class="score-details">
+                                        <div class="score-bar">
+                                            <div class="score-fill" style="width: 85%"></div>
+                                        </div>
+                                        <p>Based on multiple factors including domain history, SSL security, and content analysis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button class="btn btn-outline" id="saveReport">
+                                <i class="fas fa-download"></i> Save Report
+                            </button>
+                            <button class="btn" id="shareResult">
+                                <i class="fas fa-share-alt"></i> Share Results
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tool-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>How It Works</h3>
+                        <p>Our detection tool analyzes multiple aspects of the provided URL to determine if it's a potential phishing website. The analysis includes:</p>
+                        <ul>
+                            <li>Domain age and registration details</li>
+                            <li>SSL certificate validation</li>
+                            <li>Content analysis for suspicious patterns</li>
+                            <li>JavaScript behavior analysis</li>
+                            <li>Reputation scoring based on multiple factors</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Safety Tips</h3>
+                        <p>Remember these important safety tips when using online banking:</p>
+                        <ul>
+                            <li>Always verify the website's URL before entering credentials</li>
+                            <li>Look for the padlock icon in your browser's address bar</li>
+                            <li>Never click on links in unsolicited emails</li>
+                            <li>Use strong, unique passwords for each banking account</li>
+                            <li>Enable two-factor authentication when available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">Safe<span>Bank</span> Shield</div>
+                <p>Protecting your online banking experience with advanced phishing detection technology.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="detection-tool.html">Detection Tool</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest security updates and tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 SafeBank Shield. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/detection-tool.js"></script>
+</body>
+</html> 
