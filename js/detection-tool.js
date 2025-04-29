@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Reset the form and results when the page loads
     resetAnalysisResults();
+
     // Elements
     const analysisForm = document.querySelector('.analysis-form');
     const urlInput = document.querySelector('#urlInput');
@@ -16,6 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveReportBtn = document.querySelector('#saveReport');
     const shareResultsBtn = document.querySelector('#shareResult');
 
+    // Hide the analysis results initially
+    if (analysisResults) {
+        analysisResults.classList.remove('show');
+        analysisResults.style.display = 'none';
+    }
+
     // Form submission
     analysisForm.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -28,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show loading spinner
         loadingSpinner.style.display = 'flex';
+
+        // Make sure results are hidden during loading
         analysisResults.classList.remove('show');
+        analysisResults.style.display = 'none';
 
         try {
             // Simulate API call (replace with actual API endpoint)
@@ -41,7 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
             updateResults(response);
 
             // Show results with animation
-            analysisResults.classList.add('show');
+            analysisResults.style.display = 'block';
+            // Use setTimeout to ensure the display change takes effect before adding the show class
+            setTimeout(() => {
+                analysisResults.classList.add('show');
+            }, 10);
         } catch (error) {
             loadingSpinner.style.display = 'none';
             showError('An error occurred while analyzing the URL');
@@ -418,8 +432,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('#loadingSpinner').style.display = 'none';
         }
 
-        // Reset results to default state
-        if (document.querySelector('#analysisResults')) {
+        // Reset results to default state and hide them
+        const analysisResultsElement = document.querySelector('#analysisResults');
+        if (analysisResultsElement) {
+            // Hide the results
+            analysisResultsElement.classList.remove('show');
+            analysisResultsElement.style.display = 'none';
+
             // Reset status
             if (document.querySelector('#resultStatus')) {
                 document.querySelector('#resultStatus').className = 'result-status';

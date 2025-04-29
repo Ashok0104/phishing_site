@@ -233,11 +233,15 @@ nav {
     border-radius: 5px;
     display: none;
     text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .quick-result.show {
     display: block;
-    animation: fadeIn 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .quick-result p {

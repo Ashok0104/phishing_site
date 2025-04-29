@@ -77,6 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const quickUrlInput = document.getElementById('quickUrlInput');
     const quickResult = document.getElementById('quickResult');
 
+    // Reset quick result on page load
+    if (quickResult) {
+        quickResult.classList.remove('show');
+        quickResult.style.display = 'none';
+    }
+
     if (quickUrlForm) {
         quickUrlForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -84,14 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!url) {
                 quickResult.textContent = 'Please enter a URL';
                 quickResult.className = 'quick-result error';
-                quickResult.classList.add('show');
-                setTimeout(() => quickResult.classList.remove('show'), 3000);
+                quickResult.style.display = 'block';
+                setTimeout(() => {
+                    quickResult.classList.add('show');
+                }, 10);
+                setTimeout(() => {
+                    quickResult.classList.remove('show');
+                    setTimeout(() => {
+                        quickResult.style.display = 'none';
+                    }, 500);
+                }, 3000);
                 return;
             }
 
             quickResult.textContent = 'Analyzing...';
             quickResult.className = 'quick-result';
-            quickResult.classList.add('show');
+            quickResult.style.display = 'block';
+            // Use setTimeout to ensure the display change takes effect before adding the show class
+            setTimeout(() => {
+                quickResult.classList.add('show');
+            }, 10);
 
             try {
                 // Try to call the real API first
@@ -189,7 +207,16 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 quickResult.textContent = 'Error analyzing URL';
                 quickResult.className = 'quick-result error';
-                setTimeout(() => quickResult.classList.remove('show'), 3000);
+                quickResult.style.display = 'block';
+                setTimeout(() => {
+                    quickResult.classList.add('show');
+                }, 10);
+                setTimeout(() => {
+                    quickResult.classList.remove('show');
+                    setTimeout(() => {
+                        quickResult.style.display = 'none';
+                    }, 500);
+                }, 3000);
             }
         });
     }
