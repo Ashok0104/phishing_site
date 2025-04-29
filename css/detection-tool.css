@@ -28,11 +28,12 @@
 
 .input-group input {
     flex-grow: 1;
-    padding: 1rem;
+    padding: 0 1rem;
     border: 2px solid #e1e5eb;
     border-radius: 5px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    height: 55px;
 }
 
 .input-group input:focus {
@@ -290,30 +291,30 @@
     .input-group {
         flex-direction: column;
     }
-    
+
     .input-group button {
         width: 100%;
     }
-    
+
     .score-container {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .result-actions {
         flex-direction: column;
     }
-    
+
     .info-card {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .info-icon {
         margin: 0 auto;
     }
-    
+
     .info-content li {
         text-align: left;
     }
-} 
+}

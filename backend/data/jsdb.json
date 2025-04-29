@@ -1,0 +1,315 @@
+{
+  "jquery": {
+    "vulnerabilities": [
+      {
+        "below": "1.9.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2012-6708"]
+        },
+        "info": ["https://github.com/advisories/GHSA-gxr4-xjj5-5px2"]
+      },
+      {
+        "below": "3.4.0",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-11358"]
+        },
+        "info": ["https://github.com/advisories/GHSA-jpcq-cgw6-v4j6"]
+      },
+      {
+        "below": "3.5.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2020-11022", "CVE-2020-11023"]
+        },
+        "info": ["https://github.com/advisories/GHSA-gxr4-xjj5-5px2"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "jquery-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "/*! jQuery v(\\d+)\\.(\\d+)\\.(\\d+)",
+        "\\* jQuery JavaScript Library v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "bootstrap": {
+    "vulnerabilities": [
+      {
+        "below": "3.4.0",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2018-14040", "CVE-2018-14042"]
+        },
+        "info": ["https://github.com/advisories/GHSA-9v3m-8fp8-mj99"]
+      },
+      {
+        "below": "4.3.1",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-8331"]
+        },
+        "info": ["https://github.com/advisories/GHSA-9v3m-8fp8-mj99"]
+      },
+      {
+        "below": "4.5.3",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2020-11022"]
+        },
+        "info": ["https://github.com/advisories/GHSA-4xrv-vp3r-7jqp"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "bootstrap-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "\\* Bootstrap v(\\d+)\\.(\\d+)\\.(\\d+)",
+        "Bootstrap v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "angular": {
+    "vulnerabilities": [
+      {
+        "below": "1.6.9",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2018-1000006"]
+        },
+        "info": ["https://github.com/advisories/GHSA-prcx-m3jj-wh36"]
+      },
+      {
+        "below": "1.7.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2018-1000006"]
+        },
+        "info": ["https://github.com/advisories/GHSA-prcx-m3jj-wh36"]
+      },
+      {
+        "below": "1.8.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2019-10768"]
+        },
+        "info": ["https://github.com/advisories/GHSA-5cp4-xmrg-v2f2"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "angular(?:-core)?-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "* AngularJS v(\\d+)\\.(\\d+)\\.(\\d+)",
+        "angular(?:-core)?/?(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "react": {
+    "vulnerabilities": [
+      {
+        "below": "16.3.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2018-6341"]
+        },
+        "info": ["https://github.com/advisories/GHSA-m7mg-mrm3-rcpf"]
+      },
+      {
+        "below": "16.13.1",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2020-7422"]
+        },
+        "info": ["https://github.com/advisories/GHSA-jpcq-cgw6-v4j6"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "react-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "React v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "lodash": {
+    "vulnerabilities": [
+      {
+        "below": "4.17.11",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-10744"]
+        },
+        "info": ["https://github.com/advisories/GHSA-jf85-cpcp-j695"]
+      },
+      {
+        "below": "4.17.15",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-10744"]
+        },
+        "info": ["https://github.com/advisories/GHSA-jf85-cpcp-j695"]
+      },
+      {
+        "below": "4.17.19",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2020-8203"]
+        },
+        "info": ["https://github.com/advisories/GHSA-p6mc-m468-83gw"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "lodash(?:\\.min)?\\.(\\d+)\\.(\\d+)\\.(\\d+)\\.js",
+        "lodash-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "lodash v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "moment": {
+    "vulnerabilities": [
+      {
+        "below": "2.19.3",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2017-18214"]
+        },
+        "info": ["https://github.com/advisories/GHSA-446m-mv8f-q348"]
+      },
+      {
+        "below": "2.29.2",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2022-24785"]
+        },
+        "info": ["https://github.com/advisories/GHSA-8hfj-j24r-96c4"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "moment(?:\\.min)?\\.(\\d+)\\.(\\d+)\\.(\\d+)\\.js",
+        "moment-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "//! moment.js[\\s\\S]*?version : '(\\d+)\\.(\\d+)\\.(\\d+)'",
+        "Moment.js v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "vue": {
+    "vulnerabilities": [
+      {
+        "below": "2.5.17",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2018-16487"]
+        },
+        "info": ["https://github.com/advisories/GHSA-h5x8-cj94-h94v"]
+      },
+      {
+        "below": "2.6.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2019-5737"]
+        },
+        "info": ["https://github.com/advisories/GHSA-mpmr-4gvh-xj7c"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "vue(?:\\.min)?\\.(\\d+)\\.(\\d+)\\.(\\d+)\\.js",
+        "vue-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "Vue.js v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "handlebars": {
+    "vulnerabilities": [
+      {
+        "below": "4.0.14",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-5748"]
+        },
+        "info": ["https://github.com/advisories/GHSA-q2c6-c6pm-g3gh"]
+      },
+      {
+        "below": "4.3.0",
+        "severity": "critical",
+        "identifiers": {
+          "CVE": ["CVE-2019-19919"]
+        },
+        "info": ["https://github.com/advisories/GHSA-f52g-6jhx-qwh8"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "handlebars(?:\\.min)?\\.(\\d+)\\.(\\d+)\\.(\\d+)\\.js",
+        "handlebars-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "Handlebars v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "axios": {
+    "vulnerabilities": [
+      {
+        "below": "0.18.1",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2019-10742"]
+        },
+        "info": ["https://github.com/advisories/GHSA-4w2v-q235-vp99"]
+      },
+      {
+        "below": "0.21.1",
+        "severity": "high",
+        "identifiers": {
+          "CVE": ["CVE-2020-28168"]
+        },
+        "info": ["https://github.com/advisories/GHSA-4w2v-q235-vp99"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "axios(?:\\.min)?\\.(\\d+)\\.(\\d+)\\.(\\d+)\\.js",
+        "axios-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "axios v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  },
+  "dojo": {
+    "vulnerabilities": [
+      {
+        "below": "1.14.0",
+        "severity": "medium",
+        "identifiers": {
+          "CVE": ["CVE-2017-20147"]
+        },
+        "info": ["https://github.com/advisories/GHSA-7j9p-q6j5-fq82"]
+      }
+    ],
+    "extractors": {
+      "filename": [
+        "dojo-(\\d+)\\.(\\d+)\\.(\\d+)(\\.min)?\\.js"
+      ],
+      "filecontent": [
+        "Dojo v(\\d+)\\.(\\d+)\\.(\\d+)"
+      ]
+    }
+  }
+}

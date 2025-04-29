@@ -13,17 +13,17 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="SafeBank Shield Logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
                 <div class="logo-text">Safe<span>Bank</span> Shield</div>
             </div>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="detection-tool.html" class="active">Detection Tool</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            
+
             <div class="mobile-menu-btn" id="menuBtn">
                 <span></span>
                 <span></span>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Detection Tool Section -->
     <section class="detection-tool">
         <div class="container">
@@ -39,24 +39,24 @@
                 <h2>URL Analysis Tool</h2>
                 <p>Enter a URL to check if it's a potential phishing website</p>
             </div>
-            
+
             <div class="tool-container">
                 <form id="urlAnalysisForm" class="analysis-form">
                     <div class="input-group">
                         <input type="url" id="urlInput" placeholder="Enter URL to analyze (e.g., https://example.com)" required>
-                        <button type="submit" class="btn">
+                        <button type="submit" class="btn btn-large">
                             <i class="fas fa-search"></i> Analyze
                         </button>
                     </div>
                 </form>
-                
+
                 <div class="results-container" id="resultsContainer">
-                    <div class="loading-spinner" id="loadingSpinner">
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
                         <div class="spinner"></div>
                         <p>Analyzing URL...</p>
                     </div>
-                    
-                    <div class="analysis-results" id="analysisResults">
+
+                    <div class="analysis-results show" id="analysisResults">
                         <div class="result-header">
                             <h3>Analysis Results</h3>
                             <div class="result-status" id="resultStatus">
@@ -64,7 +64,7 @@
                                 <span class="status-text">Safe</span>
                             </div>
                         </div>
-                        
+
                         <div class="result-details">
                             <div class="detail-item">
                                 <h4>URL Analysis</h4>
@@ -83,7 +83,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="detail-item">
                                 <h4>Content Analysis</h4>
                                 <div class="detail-content">
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="detail-item">
                                 <h4>Reputation Score</h4>
                                 <div class="score-container">
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="result-actions">
                             <button class="btn btn-outline" id="saveReport">
                                 <i class="fas fa-download"></i> Save Report
@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="tool-info">
                 <div class="info-card">
                     <div class="info-icon">
@@ -148,7 +148,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="info-card">
                     <div class="info-icon">
                         <i class="fas fa-shield-alt"></i>
@@ -168,7 +168,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -182,7 +182,7 @@
                     <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -192,7 +192,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links">
                 <h3>Resources</h3>
                 <ul>
@@ -202,7 +202,7 @@
                     <li><a href="terms.html">Terms of Service</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-newsletter">
                 <h3>Stay Updated</h3>
                 <p>Subscribe to our newsletter for the latest security updates and tips.</p>
@@ -212,13 +212,13 @@
                 </form>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2024 SafeBank Shield. All rights reserved.</p>
+            <p>&copy; 2025 SafeBank Shield. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/detection-tool.js"></script>
 </body>
-</html> 
+</html>
